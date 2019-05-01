@@ -1,35 +1,33 @@
 package algorithms
 
-import (
-	"fmt"
-)
-
-var toBeSorted [5]int = [5]int{8, 5, 3, 9, 2}
-
 // Les https://en.wikipedia.org/wiki/Bubble_sort
-func Bubble_sort_modified(input [5]int) {
+func Bubble_sort_modified(list []int) {
 	// Deres kode her
-
-}
-
-// Implementering av Bubble_sort algoritmen
-func Bubble_sort(toBeSorted [5]int) {
-	// find the length of list n
-	n := len(toBeSorted)
+	n := len(list)
 	for i := 0; i < n; i++ {
 		for j := 0; j < n-1; j++ {
-			if toBeSorted[j] > toBeSorted[j+1] {
-				temp := toBeSorted[j+1]
-				toBeSorted[j+1] = toBeSorted[j]
-				toBeSorted[j] = temp
+			if list[j] > list[j+1] {
+				temp := list[j+1]
+				list[j+1] = list[j]
+				list[j] = temp
 			}
 		}
 	}
-	fmt.Println(toBeSorted)
 }
-func main() {
-	fmt.Println("These numbers are sorted")
-	Bubble_sort(toBeSorted)
+
+// Implementering av Bubble_sort algoritmen
+func Bubble_sort(list []int) {
+	// find the length of list n
+	n := len(list)
+	for i := 0; i < n; i++ {
+		for j := 0; j < n-1; j++ {
+			if list[j] > list[j+1] {
+				temp := list[j+1]
+				list[j+1] = list[j]
+				list[j] = temp
+			}
+		}
+	}
 }
 
 // Implementering av Quicksort algoritmen

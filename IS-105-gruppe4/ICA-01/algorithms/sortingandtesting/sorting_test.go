@@ -23,12 +23,6 @@ func perm(n int) (out []int) {
 // Skriv "benchmark"-tester for benchmarkBSortModified funksjonen
 // Skriv en ny testfunksjon benchmarkBSortModified
 
-func BenchmarkSort1000(b *testing.B) {
-	for n := 0; n < b.N; n++ {
-		Sort("test", 1000)
-	}
-}
-
 func BenchmarkBSort100(b *testing.B) {
 	benchmarkBSort(100, b)
 }
@@ -80,5 +74,26 @@ func benchmarkQSort(i int, b *testing.B) {
 		values := perm(i)
 		b.StartTimer()
 		QSort(values)
+	}
+}
+
+func BenchmarkBSortModified100(b *testing.B) {
+	benchmarkBSortModified(100, b)
+}
+
+func BenchmarkBSortModified1000(b *testing.B) {
+	benchmarkBSortModified(1000, b)
+}
+
+func BenchmarkBSortModified10000(b *testing.B) {
+	benchmarkBSortModified(10000, b)
+}
+
+func benchmarkBSortModified(i int, b *testing.B) {
+	for j := 0; j < b.N; j++ {
+		b.StopTimer()
+		values := perm(i)
+		b.StartTimer()
+		Bubble_sort_modified(values)
 	}
 }
