@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/tuvace/is105-ica02/unicode/unicode"
+	"github.com/REMIR18/IS-105-gruppe4/IS-105-gruppe4/ICA-02/unicode/unicode"
 )
 
 func main() {

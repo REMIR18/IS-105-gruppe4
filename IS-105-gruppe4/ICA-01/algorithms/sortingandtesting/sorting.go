@@ -1,18 +1,32 @@
 package algorithms
 
+import "fmt"
+
+//Kode lånt fra anzuh på guthub.com
 // Les https://en.wikipedia.org/wiki/Bubble_sort
-func Bubble_sort_modified(list []int) {
-	// Deres kode her
+func Bubble_sort_modified(list []int) []int {
+	// set n to length of array to sort
 	n := len(list)
+
+	// first for pass goes from 0 to length of array
 	for i := 0; i < n; i++ {
+		// second for pass goes from 0 to length of array -1
 		for j := 0; j < n-1; j++ {
-			if list[j] > list[j+1] {
+			// check if value at j index is smaller than value at j + 2
+			if list[j] < list[j+1] {
+				// set temp var to j+1
 				temp := list[j+1]
+				// set value at index j+1 to previous value
 				list[j+1] = list[j]
+				// set original value to temp
 				list[j] = temp
+				// effectively, swap values j and j+1
 			}
+			fmt.Println(list)
 		}
 	}
+	// return array so it can be printed or set to a var or whatever lmao
+	return list
 }
 
 // Implementering av Bubble_sort algoritmen

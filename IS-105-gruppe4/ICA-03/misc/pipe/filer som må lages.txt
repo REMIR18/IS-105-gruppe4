@@ -1,0 +1,3 @@
+asciitobase
+basetogzip
+asciitogzip?
