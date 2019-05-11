@@ -65,7 +65,7 @@ func BenchmarkQSort1000(b *testing.B) {
 }
 
 func BenchmarkQSort10000(b *testing.B) {
-	benchmarkQSort(10000, b)
+	benchmarkQSort(100000000, b)
 }
 
 func benchmarkQSort(i int, b *testing.B) {

@@ -1,10 +1,10 @@
 package main
 
 import (
-	"github.com/REMIR18/IS-105-gruppe4/IS-105-gruppe4/ICA-01/algorithms/sortingandtesting/sorting"
+	"github.com/REMIR18/IS-105-gruppe4/IS-105-gruppe4/ICA-01/algorithms/sortingandtesting"
 )
 
 func main() {
-	sorting.BSortModified()
+	sortingandtesting.BenchmarkBSort1000()
 
 }

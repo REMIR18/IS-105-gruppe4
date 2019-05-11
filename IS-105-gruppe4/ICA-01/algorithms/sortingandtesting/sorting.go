@@ -1,8 +1,6 @@
 package algorithms
 
-import "fmt"
-
-//Kode lånt fra anzuh på guthub.com
+//Kode lånt fra anzuh på github.com
 // Les https://en.wikipedia.org/wiki/Bubble_sort
 func Bubble_sort_modified(list []int) []int {
 	// set n to length of array to sort
@@ -22,10 +20,9 @@ func Bubble_sort_modified(list []int) []int {
 				list[j] = temp
 				// effectively, swap values j and j+1
 			}
-			fmt.Println(list)
 		}
 	}
-	// return array so it can be printed or set to a var or whatever lmao
+	// return array for later use
 	return list
 }
 
