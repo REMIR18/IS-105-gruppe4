@@ -6,10 +6,11 @@ import (
 	"os"
 )
 
-func FileToByteslice("text1.txt" string) []byte {
+// FileToByteslice åpner og leser filene
+func FileToByteslice(filename string) []byte {
 
 	// Open file for reading
-	file, err := os.Open("text1.txt")
+	file, err := os.Open(filename)
 
 	if err != nil {
 		log.Fatal(err)
@@ -18,19 +19,20 @@ func FileToByteslice("text1.txt" string) []byte {
 	if err != nil {
 		log.Fatal(err)
 	}
-	size_of_slice := finfo.Size()
+	sizeOfSlice := finfo.Size()
 
 	// The file.Read() function can read a
 	// tiny file into a large byte slice,
 	// but io.ReadFull() will return an
 	// error if the file is smaller than
 	// the byte slice
-	byteSlice := make([]byte, size_of_slice)
+	byteSlice := make([]byte, sizeOfSlice)
 
 	_, err = io.ReadFull(file, byteSlice)
 	if err != nil {
 		log.Fatal(err)
 	}
+	// Returnerer byteslice til tekstfilene
 	return byteSlice
 
 }

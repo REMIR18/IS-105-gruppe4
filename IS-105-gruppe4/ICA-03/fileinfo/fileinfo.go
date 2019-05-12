@@ -7,6 +7,7 @@ import (
 	"os"
 )
 
+// Funksjon som henter informasjon om filen
 func getFileInfo(filnavn string) {
 	file, err := os.Lstat(filnavn)
 
@@ -30,6 +31,8 @@ func getFileInfo(filnavn string) {
 	fmt.Printf("Unix char device: %t\n", os.ModeDevice&os.ModeCharDevice != 0)
 
 }
+
+// Funksjonen som gjør at man kan kjøre programmet i terminal.
 func main() {
 
 	var filnavn string
